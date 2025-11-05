@@ -8,15 +8,15 @@ export default function BackGround() {
 
     // 1️⃣ Generar URL de Google Maps Static API
     useEffect(() => {
-        const apiKey = "AIzaSyAAhqNQiO7azdI63iHFYzQZiTgh12mWYRs"; // ⚠️ tu API key
-        const lat = 41.3851; // Barcelona
-        const lon = 2.1734;
-        const zoom = 17;
-        const size = "1024x1024";
-        const mapType = "satellite";
+        // const apiKey = "AIzaSyAAhqNQiO7azdI63iHFYzQZiTgh12mWYRs"; // ⚠️ tu API key
+        // const lat = 41.3851; // Barcelona
+        // const lon = 2.1734;
+        // const zoom = 17;
+        // const size = "1024x1024";
+        // const mapType = "satellite";
 
         // const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAAhqNQiO7azdI63iHFYzQZiTgh12mWYRs&q=Space+Needle,Seattle+WA`;
-        const url = `https://maps.googleapis.com/maps/api/staticmap?center=Space+Needle,Seattle+WA&zoom=17&size=1024x1024&maptype=satellite&key=AIzaSyAAhqNQiO7azdI63iHFYzQZiTgh12mWYRs`;
+        const url : any = `https://maps.googleapis.com/maps/api/staticmap?center=Space+Needle,Seattle+WA&zoom=17&size=1024x1024&maptype=satellite&key=AIzaSyAAhqNQiO7azdI63iHFYzQZiTgh12mWYRs`;
         setImageUrl(url);
         // const url = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lon}&zoom=${zoom}&size=${size}&maptype=${mapType}&key=${apiKey}`;
         // setImageUrl(url);
