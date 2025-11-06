@@ -6,10 +6,10 @@ import './BuildingUI.css'
 export default function BackGround() {
     // const { scene } = useThree();
     const [imageUrl, setImageUrl] = useState(null);
-
+    const apiKey = import.meta.env.VITE_API_KEY;
     // getting google maps static image
     useEffect(() => {
-        const url: any = `https://maps.googleapis.com/maps/api/staticmap?center=Space+Needle,Seattle+WA&zoom=17&size=1024x1024&maptype=satellite&key=AIzaSyAAhqNQiO7azdI63iHFYzQZiTgh12mWYRs`;
+        const url: any = `https://maps.googleapis.com/maps/api/staticmap?center=Space+Needle,Seattle+WA&zoom=17&size=1024x1024&maptype=satellite&key=${apiKey}`;
         setImageUrl(url);
 
     }, []);
