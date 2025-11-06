@@ -16,22 +16,22 @@ export default function BuildingUI() {
 
     return (
         <div className="main-ui">
-            <h3>Edición del edificio</h3>
-            <button onClick={() => setColorLine('blue')}>Color Azul</button>
-            <button onClick={() => setColorLine('red')}>Color Rojo</button>
-            <button onClick={() => setColorLine('green')}>Color Verde</button>
+            <h3>Building Edit</h3>
+            <button onClick={() => setColorLine('blue')}>Blue Line</button>
+            <button onClick={() => setColorLine('red')}>Red Line</button>
+            <button onClick={() => setColorLine('green')}>Green Line</button>
 
-            <button onClick={() => setColorExtrude('blue')}>Color Azul Extrusión</button>
-            <button onClick={() => setColorExtrude('red')}>Color Rojo Extrusión</button>
-            <button onClick={() => setColorExtrude('green')}>Color Verde Extrusión</button>
+            <button onClick={() => setColorExtrude('blue')}>Blue Extrusion</button>
+            <button onClick={() => setColorExtrude('red')}>Red Extrusion</button>
+            <button onClick={() => setColorExtrude('green')}>Green Extrusion</button>
 
             <button onClick={() => setIsDrawing(!isDrawing)}>
-                {isDrawing ? '🛑 Salir del modo dibujo' : '✏️ Activar dibujo'}
+                {isDrawing ? '🛑 Exit Drawing Mode' : '✏️ Activate Drawing'}
             </button>
 
             {isClosed && height === null && (
                 <>
-                    <h4>Altura:</h4>
+                    <h4>Height:</h4>
                     <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                         <input
                             type="number"
@@ -59,7 +59,7 @@ export default function BuildingUI() {
                                 fontWeight: 'bold',
                             }}
                         >
-                            Aceptar
+                            Accept
                         </button>
                     </div>
                 </>
@@ -67,10 +67,10 @@ export default function BuildingUI() {
 
             {isClosed && height && (
                 <>
-                    <h4>Puntos:</h4>
+                    <h4>Points:</h4>
                     {points.map((p, i) => (
                         <div key={i} style={{ marginBottom: 8 }}>
-                            Punto {i + 1}
+                            Point {i + 1}
                             <input
                                 type="number"
                                 value={p.x}

@@ -22,7 +22,7 @@ export default function Scene() {
         <Environment preset="night" backgroundIntensity={0.2} background />
         <NewPolygonDrawer />
         <OrbitControls />
-        <CustomOrbitControls />
+        {/* <CustomOrbitControls /> */}
 
       </Canvas>
     </>
