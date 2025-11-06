@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import { useBuildingStore } from './useLineDrawing'
 import { LineGeometry, LineMaterial } from 'three/examples/jsm/Addons.js'
 import { Line2 } from 'three/examples/jsm/lines/webgpu/Line2.js'
+import { color } from 'three/tsl'
 
 function DrawingPlane() {
   const { addPoint, isClosed, isDrawing } = useBuildingStore()
@@ -64,7 +65,7 @@ function PreviewLine({ hoverPoint }: { hoverPoint: THREE.Vector3 | null }) {
 
 
 export function PolygonLines() {
-  const { points, isClosed } = useBuildingStore()
+  const { points, isClosed , colorLine} = useBuildingStore()
   const lineRef = useRef<Line2>(null!)
 
   if (points.length < 2) return null
@@ -76,7 +77,7 @@ export function PolygonLines() {
   geometry.setPositions(positions)
 
   const material = new LineMaterial({
-    color: isClosed ? 0x00ff00 : 0xffa500,
+    color: isClosed ? colorLine : 0xffa500,
     linewidth: 0.01
   })
 
@@ -85,7 +86,7 @@ export function PolygonLines() {
 }
 
 function ExtrudedBuilding() {
-  const { points, height } = useBuildingStore()
+  const { points, height, colorExtrude } = useBuildingStore()
   const shape = useMemo(() => {
     if (points.length < 3) return null
     const s = new THREE.Shape()
@@ -102,7 +103,7 @@ function ExtrudedBuilding() {
   return (
     <mesh rotation-x={Math.PI / 2}>
       <extrudeGeometry args={[shape, extrudeSettings]} />
-      <meshStandardMaterial color='red' side={THREE.DoubleSide} />
+      <meshStandardMaterial color={colorExtrude} side={THREE.DoubleSide} />
     </mesh>
   )
 }
