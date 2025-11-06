@@ -3,7 +3,6 @@ import * as THREE from 'three'
 import { useBuildingStore } from './useLineDrawing'
 import { LineGeometry, LineMaterial } from 'three/examples/jsm/Addons.js'
 import { Line2 } from 'three/examples/jsm/lines/webgpu/Line2.js'
-import { color } from 'three/tsl'
 
 function DrawingPlane() {
   const { addPoint, isClosed, isDrawing } = useBuildingStore()
