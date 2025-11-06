@@ -4,7 +4,7 @@ import './App.css'
 import NewPolygonDrawer from './NewPolygonDraw'
 import BuildingUI from './BuildingUI'
 import BackGround from './BackGround'
-import { CustomOrbitControls } from './CustomOrbitControls'
+// import { CustomOrbitControls } from './CustomOrbitControls'
 import { Environment, OrbitControls } from '@react-three/drei'
 
 export default function Scene() {
