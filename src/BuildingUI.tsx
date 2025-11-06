@@ -3,7 +3,7 @@ import { useBuildingStore } from './useLineDrawing'
 import './BuildingUI.css'
 
 export default function BuildingUI() {
-    const { points, setPoints, height, setHeight, isClosed, reset, isDrawing, setIsDrawing , colorLine, setColorLine, setColorExtrude } = useBuildingStore()
+    const { points, setPoints, height, setHeight, isClosed, reset, isDrawing, setIsDrawing , setColorLine, setColorExtrude } = useBuildingStore()
 
     const updatePoint = (index: number, axis: 'x' | 'z', value: number) => {
         const updated = points.map((p, i) =>

@@ -18,7 +18,7 @@ interface BuildingState {
     setColorLine: (c: string) => void
     setColorExtrude: (c: string) => void
 }
-
+// @ts-ignore
 export const useBuildingStore = create<BuildingState>((set, get) => ({
     points: [],
     isDrawing: false,

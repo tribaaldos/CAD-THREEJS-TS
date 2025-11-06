@@ -1,10 +1,10 @@
-import { useThree } from "@react-three/fiber";
+// import { useThree } from "@react-three/fiber";
 import { useEffect, useState } from "react";
 import { TextureLoader } from "three";
 import './BuildingUI.css'
-import { texture } from "three/tsl";
+// import { texture } from "three/tsl";
 export default function BackGround() {
-    const { scene } = useThree();
+    // const { scene } = useThree();
     const [imageUrl, setImageUrl] = useState(null);
 
     // getting google maps static image
