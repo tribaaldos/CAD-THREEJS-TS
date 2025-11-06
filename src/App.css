@@ -1,6 +1,10 @@
-html, #root, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+#root,
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    overflow: hidden;
 }

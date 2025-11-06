@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^9.0.6",
     "@react-three/fiber": "^9.1.2",
     "@types/three": "^0.180.0",
+    "leva": "^0.10.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-draggable": "^4.5.0",
     "three": "^0.180.0"
   },
   "devDependencies": {

@@ -1,30 +1,26 @@
 
 import { Canvas } from '@react-three/fiber'
 import './App.css'
-import { OrbitControls } from '@react-three/drei'
+import NewPolygonDrawer from './NewPolygonDraw'
+import BuildingUI from './BuildingUI'
 import BackGround from './BackGround'
-// import BackGround from './BackGround'
 
-function App() {
-
+export default function Scene() {
+  // color leva controls
 
   return (
     <>
-      <Canvas>
-        <mesh>
-          <boxGeometry />
-          <meshStandardMaterial color="orange" />
-        </mesh>
-        <ambientLight intensity={0.5} />
-        <OrbitControls />
-        <BackGround/>
+      <BuildingUI />
+      <Canvas camera={{ position: [0, 10, 10], fov: 45 }}>
+        <ambientLight intensity={0.2}/>
+        <pointLight position={[0, 5, 0]} intensity={5}/>
+        <BackGround />
+        {/* <gridHelper args={[100, 100]} /> */}
+        {/* <PolygonDrawer/> */}
+    {/* <Environment preset="night" backgroundIntensity={0.2} background/> */}
+        <NewPolygonDrawer />
+
       </Canvas>
-      {/* <img src="https://ethic.es/wp-content/uploads/2023/03/imagen.jpg" alt="Imagen de ejemplo" /> */}
-
-
-
     </>
   )
 }
-
-export default App
